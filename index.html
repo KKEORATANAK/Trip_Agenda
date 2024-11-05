@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanuman&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>ដំណើរកម្សាន្តទៅកាន់រមណីយដ្ឋាន Hill Villa</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom CSS */
+      @import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap");
+      body {
+        font-family: "Hanuman", serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      .header {
+        background-image: url("img/01.jpg"); /* Replace with the path to your image */
+        background-size: cover; /* Makes the image cover the entire area */
+        background-position: center; /* Centers the image */
+        color: whitesmoke;
+        padding: 20px;
+        text-align: center;
+      }
+      .agenda .card {
+        margin: 10px 0;
+      }
+      .member-card {
+        text-align: center;
+        padding: 10px;
+      }
+      .member-fun-fact {
+        font-style: italic;
+        color: #555;
+      }
+      .resort-gallery img {
+        width: 100%;
+      }
+      .thank-you {
+        background-color: #f8f9fa;
+        padding: 40px;
+        text-align: center;
+      }
+      .qr-code {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Autoplay Music -->
+    <audio id="background-music" loop>
+      <source src="TAGMEZ.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <button id="play-music" onclick="playMusic()" style="display: none">
+      Play Music
+    </button>
+
+    <!-- Header Section -->
+    <div class="header">
+      <div class="overlay">
+        <h1>ដំណើរកម្សាន្តទៅកាន់រមណីយដ្ឋាន Hill Villa</h1>
+        <p>Date: វិច្ឆកា ១៤-១៥, ២០២៤</p>
+      </div>
+    </div>
+
+    <!-- Agenda Section -->
+    <div class="container my-5">
+      <h2>Agenda</h2>
+      <div class="agenda">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ការចាកចេញ</h5>
+            <p class="card-text">
+              Time: 9 AM - 10 AM - ជួបជុំគ្នានៅផ្ទះតៃកុងឡាន
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ទៅដល់</h5>
+            <p class="card-text">Time: 1:00 PM - ឈប់សម្រាក់ហូបបាយថ្ងៃ</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ទៅដល់ Resort</h5>
+            <p class="card-text">Time: 4:00 PM - Check-in at resort</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ទៅដល់ Resort</h5>
+            <p class="card-text">Time: 7:00 PM - ហូបបាយល្ងាចទាំងអស់គ្នា</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">ទៅដល់ Resort</h5>
+            <p class="card-text">Time: 8:00 PM - ហូបប៊ៀយែ</p>
+          </div>
+        </div>
+        <!-- Add more agenda items as needed -->
+      </div>
+    </div>
+
+    <!-- Members Section -->
+    <div class="container my-5">
+      <h2>សមាជិកដែលបានចូលរួម</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Tiny</h5>
+            <p>អ្នកចាត់ចែងកម្មវិធីផ្តាល់</p>
+            <p class="member-fun-fact">"អាជើង បឹម !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Phear</h5>
+            <p>ជំនួយការ អ្នកចាត់ចែង</p>
+            <p class="member-fun-fact">"អាជើងជិះរថភ្លើង !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Vatana</h5>
+            <p>តៃកុងឡាន</p>
+            <p class="member-fun-fact">"អាសុាំ !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Leap</h5>
+            <p>ចុងភៅ</p>
+            <p class="member-fun-fact">"អាជាង អួយ !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Smey</h5>
+            <p>ជំនួយការ ចុងភៅ</p>
+            <p class="member-fun-fact">"អាជើងមកពីហែងនឹង !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Rathed</h5>
+            <p>ដោះស្រាយវិបាត់នៅចំពោះមុខ</p>
+            <p class="member-fun-fact">"អា​ជើង​ លួង !"</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="member-card">
+            <h5>Mr. Nak</h5>
+            <p>ចាត់ចែង កន្លែងដេក</p>
+            <p class="member-fun-fact">"ប្រូខ្មៅ !"</p>
+          </div>
+        </div>
+        <!-- Repeat similar member cards for each participant -->
+      </div>
+    </div>
+
+    <!-- Resort Gallery -->
+    <div class="container my-5">
+      <h2>កម្រងរូបភាពរបស់ Resort</h2>
+      <div id="resortCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner resort-gallery">
+          <div class="carousel-item active">
+            <img
+              src="img/01.jpg"
+              alt="Resort Image 1"
+              class="img-fluid w-100"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="img/03.jpg" alt="Resort Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/04.jpg" alt="Resort Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/05.jpg" alt="Resort Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/06.jpg" alt="Resort Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/02.jpg" alt="Resort Image 2" />
+          </div>
+          <!-- Add more carousel items as needed -->
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#resortCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#resortCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Thank You Note -->
+    <div class="thank-you">
+      <h2>សេចក្តីថ្លែងអំណរគុណ</h2>
+      <p>យើងរីករាយក្នុងការបង្កើតអនុស្សាវរីយ៍ដែលមិនអាចបំភ្លេចបានជាមួយគ្នា</p>
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="container qr-code mb-5">
+      <h2>QR Code</h2>
+      <img src="img/QR.png" alt="Bank QR Code" style="max-width: 200px" />
+      <p>សំ ទីនី</p>
+      <p>អេស៊ីលីដា</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Autoplay Music Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const music = document.getElementById("background-music");
+        const playButton = document.getElementById("play-music");
+
+        // Try to play the music on load
+        const playPromise = music.play();
+
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Show the Play Music button if autoplay fails
+            playButton.style.display = "block";
+          });
+        }
+      });
+
+      function playMusic() {
+        document.getElementById("background-music").play();
+        document.getElementById("play-music").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
