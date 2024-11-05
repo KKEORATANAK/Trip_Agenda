@@ -57,12 +57,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        );
+        background-color: rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -73,12 +68,12 @@
   <body>
     <!-- Autoplay Music -->
     <audio id="background-music" loop autoplay>
-        <source src="TAGMEZ.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
+      <source src="TAGMEZ.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
     </audio>
-    
-    <button id="play-music" onclick="playMusic()" style="display: none;">
-        Play Music
+
+    <button id="play-music" onclick="playMusic()" style="display: none">
+      Play Music
     </button>
 
     <!-- Header Section -->
@@ -234,6 +229,53 @@
       </div>
     </div>
 
+    <!-- Expenses Section -->
+    <div class="container my-5">
+      <h2>ការចំណាយនៃដំណើរកំសាន្ត</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">50$ ម្នាក់</h5>
+              <p class="card-text">ចំនួនសម្រាប់ការចំណាយម្នាក់ឯង</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ចំណាយសម្រាប់សាំង</h5>
+              <p class="card-text">$50</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ចំណាយសម្រាប់​ Resort</h5>
+              <p class="card-text">$170</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ចំណាយសម្រាប់អាហារ</h5>
+              <p class="card-text">$80</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ចំណាយផ្សេងៗ</h5>
+              <p class="card-text">$50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Thank You Note -->
     <div class="thank-you">
       <h2>សេចក្តីថ្លែងអំណរគុណ</h2>
@@ -255,18 +297,18 @@
 
     <!-- Autoplay Music Script -->
     <script>
-        // Function to play music
-        function playMusic() {
-            const music = document.getElementById('background-music');
-            music.play().catch(error => {
-                console.log('Autoplay was prevented:', error);
-            });
-        }
-    
-        // Attempt to autoplay on page load
-        window.addEventListener('load', () => {
-            playMusic();
+      // Function to play music
+      function playMusic() {
+        const music = document.getElementById("background-music");
+        music.play().catch((error) => {
+          console.log("Autoplay was prevented:", error);
         });
+      }
+
+      // Attempt to autoplay on page load
+      window.addEventListener("load", () => {
+        playMusic();
+      });
     </script>
   </body>
 </html>
